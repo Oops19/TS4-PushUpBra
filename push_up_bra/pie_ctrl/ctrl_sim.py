@@ -44,6 +44,7 @@ class CtrlSim:
         if isinstance(outfit_category, OutfitCategory):
             outfit_category = outfit_category.value
         if outfit_category == OutfitCategory.BATHING.value or outfit_category == OutfitCategory.SPECIAL.value and outfit_index == SpecialOutfitIndex.TOWEL:
+            # don't block swimwear push-up bras
             return CommonTestResult.FALSE
 
         return CommonTestResult.TRUE

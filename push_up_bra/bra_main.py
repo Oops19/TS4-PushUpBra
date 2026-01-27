@@ -31,7 +31,7 @@ class BraMain(metaclass=Singleton):
         self.modifier = CustomSlider.BLOB_SIM_BODY_MODIFIER
         self.slider_keys: Set[int] = set()
 
-        # Register local sliders within TS4L
+        # Register local slider names within TS4L
         _sliders: Dict[str, int] = {}
         for k, v in PieSlider.__members__.items():
             value = v.value
@@ -68,6 +68,11 @@ class BraMain(metaclass=Singleton):
         log.debug(f"'{sim_info} slider {PieSlider(slider_small).name} = {value_small:.2f}")
         log.debug(f"'{sim_info} slider {PieSlider(slider_big).name} = {value_big:.2f}")
 
+        if slider_f_small == PieSlider.o19_yfheadChest_Small:
+            caller.slider_f_small = caller.slider_m_small = PieSlider.o19_yfheadChest_Small_2
+            caller.slider_f_big = caller.slider_m_big = PieSlider.o19_yfheadChest_Big_2
+            self.process_interaction(caller, interaction_sim, interaction_target)
+
     def change_outfit(self, sim_info: Union[SimInfo, SimInfoBaseWrapper], *args, **kwargs):
         # log.debug(f"change_outfit({sim_info}: {type(sim_info)}; {args}; {kwargs})")
 
@@ -77,6 +82,7 @@ class BraMain(metaclass=Singleton):
             sim_info: SimInfo = CommonSimUtils.get_sim_info(sim_id)
         if sim_info is None:
             log.debug(f"sim_info is None")
+            return
         if isinstance(sim_info, SimInfo):
             sim_id = CommonSimUtils.get_sim_id(sim_info)
         else:
@@ -93,26 +99,9 @@ class BraMain(metaclass=Singleton):
         outfit_id = outfit_category * 100 + outfit_index
         log.debug(f"change_outfit({sim_id}, {outfit_category}, {outfit_index}; {outfit_id})")
 
-        if outfit_category == OutfitCategory.BATHING.value or outfit_category == OutfitCategory.SPECIAL.value and outfit_index == SpecialOutfitIndex.TOWEL:
-            slider_value = 0
+        # remove push-up bra for these outfits
+        if outfit_category == OutfitCategory.SWIMWEAR.value or OutfitCategory.BATHING.value or (outfit_category == OutfitCategory.SPECIAL.value and outfit_index == SpecialOutfitIndex.TOWEL.value):
+            slider_value = 0.0
             for slider_key in self.slider_keys:
                 self.ms.slide_to(sim_info, self.modifier, slider_key, slider_value)
-            self.ms.slide_to(sim_info, self.modifier, slider_key, slider_value)
             log.info(f"'{sim_info}' removed all temporary body modifications")
-
-
-r"""
-o19_slider_b_push_up_bra
-FF4D927BBBD4A00E 18396521113008250894
-
-"Instance": "0x949E5305DB22495D", 10709088248550017373
-"Name": "o19_slider_f_push_up_bra"
-o19.ts4l.slider.set 2 10709088248550017373 1
-o19.ts4l.slider.set 2 10709088248550017373 0
-
-"Instance": "0x982FD3F9B5E13FE3", 10966216687122202595
-"Name": "o19_slider_m_push_up_bra"
-o19.ts4l.slider.set 2 10966216687122202595 1
-o19.ts4l.slider.set 2 10966216687122202595 0
-
-"""

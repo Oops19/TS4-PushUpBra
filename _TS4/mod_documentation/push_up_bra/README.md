@@ -3,7 +3,7 @@
 * 📏 Temporary cosmetic sliders that simulate the effect of a push‑up bra.
 * 👗 Options to enhance bust, hips, or butt for the active Sim.
 * 🩱 Underwear overlays that create the appearance of a slimmer body.
-* 🛁 Automatic removal of underwear effects when Sims change into bathing or towel outfits.
+* 🛁 Automatic removal of underwear effects when Sims change into swimwear, bathing or towel outfits.
 * 👕 Works with male Sims if outfits have proper chest weight paint.
 
 ## 📜 Disclaimer

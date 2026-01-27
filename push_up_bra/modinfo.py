@@ -28,9 +28,17 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '0.0.1'
+        return '0.0.4'
 
 
 r"""
+v0.0.4
+    Remove push-up bra when changing into swimwear.
+v0.0.3
+    Double chest sliders
+    Show 'Brassières > Sport' bra
+v0.0.2
+    Fix sim_info is None check
+    Fix TOWEL check
 v0.0.1 Initial version
 """
