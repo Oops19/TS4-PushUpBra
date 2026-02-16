@@ -2,8 +2,11 @@
 # LICENSE https://creativecommons.org/licenses/by/4.0/ https://creativecommons.org/licenses/by/4.0/legalcode
 # © 2026 https://github.com/Oops19
 #
+
+
 from push_up_bra.enums.pie_slider import PieSlider
 from push_up_bra.modinfo import ModInfo
+from sims4communitylib.utils.sims.common_buff_utils import CommonBuffUtils
 
 from ts4lib.custom_enums.custom_slider import CustomSlider
 from ts4lib.enums.sim_modifier import SimModifier
@@ -37,9 +40,9 @@ class BraMain(metaclass=Singleton):
             value = v.value
             self.slider_keys.add(value)
             _sliders.update({value: k})
-        log.debug(f"{_sliders}")  # TODO
         SimModifier.MAP.update(_sliders)
-        log.debug(f"{SimModifier.MAP}")  # TODO
+        # log.debug(f"{_sliders}")
+        # log.debug(f"{SimModifier.MAP}")
 
     def process_interaction(self, caller, interaction_sim: Sim, interaction_target: Any):
         r"""
@@ -72,6 +75,12 @@ class BraMain(metaclass=Singleton):
             caller.slider_f_small = caller.slider_m_small = PieSlider.o19_yfheadChest_Small_2
             caller.slider_f_big = caller.slider_m_big = PieSlider.o19_yfheadChest_Big_2
             self.process_interaction(caller, interaction_sim, interaction_target)
+
+            r""" if self.pheromones: 
+                if value_big >= 0.9:
+                    buff_id = 150037  # buff_MindPowers_AlluringVisage_Self_3
+                    CommonBuffUtils.add_buff(sim_info, buff_id)
+            """
 
     def change_outfit(self, sim_info: Union[SimInfo, SimInfoBaseWrapper], *args, **kwargs):
         # log.debug(f"change_outfit({sim_info}: {type(sim_info)}; {args}; {kwargs})")

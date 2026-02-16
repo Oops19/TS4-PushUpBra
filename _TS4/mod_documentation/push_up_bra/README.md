@@ -1,4 +1,4 @@
-# 👗 Push‑Up Bra Mod for The Sims 4
+# 👙 Push‑Up Bra Mod for The Sims 4
 ## ✨ Features
 * 📏 Temporary cosmetic sliders that simulate the effect of a push‑up bra.
 * 👗 Options to enhance bust, hips, or butt for the active Sim.
@@ -31,7 +31,7 @@ Not your look, but the look of your Sims!
 * Choose cushions for chest, hips, or butt, or select underwear for a slimmer look.
 * Effects are temporary and reset when changing into swimwear or towel outfits.
 
-## 🚧 Not Yet Implemented
+## 🚧  Not Yet Implemented
 * A slim body option.
 * Options for Sims who want to add cushions to appear pregnant, or wear items to hide pregnancy.
 
@@ -40,7 +40,7 @@ Not your look, but the look of your Sims!
 # 📝 Addendum
 
 ## 🔄 Game compatibility
-This mod has been tested with `The Sims 4` 1.120.140, S4CL 3.17, TS4Lib 0.3.42.
+This mod has been tested with `The Sims 4` 1.121.361, S4CL 3.19, TS4Lib 0.3.42.
 It is expected to remain compatible with future releases of TS4, S4CL, and TS4Lib.
 
 ## 📦 Dependencies

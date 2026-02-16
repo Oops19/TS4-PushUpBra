@@ -28,10 +28,14 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '0.0.4'
+        return '0.0.6'
 
 
 r"""
+v0.0.6
+    Rename the slider package from '_o19_/o19_slider_ts4.package' to '_o19_/pushupbra_slider.package' 
+v0.0.5
+    Update the icon
 v0.0.4
     Remove push-up bra when changing into swimwear.
 v0.0.3

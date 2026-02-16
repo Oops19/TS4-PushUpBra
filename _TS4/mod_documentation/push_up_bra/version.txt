@@ -1,5 +1,5 @@
-PushUpBra v0.0.4 for The Sims 4 v1.120.140 and S4CL v3.17
-Created on 2026-01-27
-v0.0.4
-    Remove push-up bra when changing into swimwear.
+PushUpBra v0.0.6 for The Sims 4 v1.121.361 and S4CL v3.19
+Created on 2026-02-12
+v0.0.6
+    Rename the slider package from '_o19_/o19_slider_ts4.package' to '_o19_/pushupbra_slider.package' 
 
