@@ -23,6 +23,7 @@ class PieSlider(CustomIntEnum):
     o19_yfheadChest_Big = 0x75831AFD4C9EFA66
     o19_yfheadChest_Small_2 = 0xE88F432E38C1AA8E
     o19_yfheadChest_Big_2 = 0x8FDEE5C0324A1725
+    o19_yfheadChest_NursingShield = 0x34123576816BA775
 
     r"""
     @classmethod

@@ -68,19 +68,19 @@ class BraMain(metaclass=Singleton):
             slider_big = slider_m_big
         self.ms.slide_to(sim_info, self.modifier, slider_small, value_small)
         self.ms.slide_to(sim_info, self.modifier, slider_big, value_big)
-        log.debug(f"'{sim_info} slider {PieSlider(slider_small).name} = {value_small:.2f}")
-        log.debug(f"'{sim_info} slider {PieSlider(slider_big).name} = {value_big:.2f}")
+        try:
+            log.debug(f"'{sim_info} slider {PieSlider(slider_small).name} = {value_small:.2f}")
+        except:
+            log.debug(f"'{sim_info} slider {slider_small} = {value_small:.2f}")
+        try:
+            log.debug(f"'{sim_info} slider {PieSlider(slider_big).name} = {value_big:.2f}")
+        except:
+            log.debug(f"'{sim_info} slider {slider_big} = {value_big:.2f}")
 
         if slider_f_small == PieSlider.o19_yfheadChest_Small:
             caller.slider_f_small = caller.slider_m_small = PieSlider.o19_yfheadChest_Small_2
             caller.slider_f_big = caller.slider_m_big = PieSlider.o19_yfheadChest_Big_2
             self.process_interaction(caller, interaction_sim, interaction_target)
-
-            r""" if self.pheromones: 
-                if value_big >= 0.9:
-                    buff_id = 150037  # buff_MindPowers_AlluringVisage_Self_3
-                    CommonBuffUtils.add_buff(sim_info, buff_id)
-            """
 
     def change_outfit(self, sim_info: Union[SimInfo, SimInfoBaseWrapper], *args, **kwargs):
         # log.debug(f"change_outfit({sim_info}: {type(sim_info)}; {args}; {kwargs})")
@@ -90,7 +90,7 @@ class BraMain(metaclass=Singleton):
             sim_id = CommonSimUtils.get_sim_id(sim_info)
             sim_info: SimInfo = CommonSimUtils.get_sim_info(sim_id)
         if sim_info is None:
-            log.debug(f"sim_info is None")
+            # log.debug(f"sim_info is None")
             return
         if isinstance(sim_info, SimInfo):
             sim_id = CommonSimUtils.get_sim_id(sim_info)

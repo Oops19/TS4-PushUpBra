@@ -28,10 +28,14 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '0.0.6'
+        return '0.0.7'
 
 
 r"""
+v0.0.7
+    Add support for Nursing Shields
+    Fix name
+    Catch exception for unknown slider names
 v0.0.6
     Rename the slider package from '_o19_/o19_slider_ts4.package' to '_o19_/pushupbra_slider.package' 
 v0.0.5

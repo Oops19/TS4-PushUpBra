@@ -1,5 +1,7 @@
-PushUpBra v0.0.6 for The Sims 4 v1.121.361 and S4CL v3.19
-Created on 2026-02-12
-v0.0.6
-    Rename the slider package from '_o19_/o19_slider_ts4.package' to '_o19_/pushupbra_slider.package' 
+PushUpBra v0.0.7 for The Sims 4 v1.121.372 and S4CL v3.19
+Created on 2026-03-02
+v0.0.7
+    Add support for Nursing Shields
+    Fix name
+    Catch exception for unknown slider names
 

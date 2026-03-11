@@ -35,6 +35,9 @@ class PieSimReg(CommonScriptObjectInteractionHandler):
             0xA713A2FEE46BF5BA,  # 'Tiny Butt' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Panties_PMA_PieSim_Tiny_Butt')
             0xF0D04C68F7410C16,  # 'Vanilla Hips' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Panties_PMA_PieSim_Vanilla_Hips')
             0x48A72F5C7DBBF5EE,  # 'Wide Hips' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Panties_PMA_PieSim_Wide_Hips')
+            0x42B85C0E2BFC603C,  # 'Big' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Nursing_Shield_PMA_PieSim_Big')
+            0x41F25CC191E26C1B,  # 'Small' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Nursing_Shield_PMA_PieSim_Small')
+            0xC4696D14F96AFCD8,  # 'None' - fnv('o19_PushUpBra_PMC__142150__Lingerie__Nursing_Shield_PMA_PieSim_None')
         )
         return interactions
 
